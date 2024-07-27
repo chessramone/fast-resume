@@ -1,0 +1,39 @@
+{{ $contribData := .Site.Data.contrib }}
+{{ $sortedContribs :=
+   partial "helpers/sort_data.html"
+   (dict "data" $contribData) }}
+
+<section id="contrib">
+    <h2>Contributions</h2>
+    {{ range $sortedContribs }}
+      {{ $key := .key }}
+      {{ $value := .value }}
+
+      {{ if index $contribData (printf "use_%s" $key) }}
+	<div class="contribution-item">
+	  <p><strong>
+	    {{ $value.project_name }}
+	  </strong>
+	    {{ if and $value.start_date $value.end_date }}
+	      ({{ $value.start_date }} - {{ $value.end_date }})
+	    {{ end }}
+	  </p>
+	  {{ if $value.link }}
+	    <p>Project Link: <a href="{{ $value.link }}" target="_blank">{{ $value.link }}</a></p>
+	  {{ end }}
+	  <br>
+
+
+	  {{ if $value.tasks }}
+	  <p> My Contributions: </p>
+	    <ul>
+	      {{ range $value.tasks }}
+		<li>{{ . }}</li>
+	      {{ end }}
+	    </ul>
+	  {{ end }}
+	</div>
+      {{ end }}
+
+    {{ end }}
+</section>

@@ -1,0 +1,6 @@
+baseURL = ''
+languageCode = 'en-us'
+title = 'Derek Barnes Resume'
+
+[params]
+    name = 'Derek Barnes'

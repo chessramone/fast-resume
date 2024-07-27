@@ -1,0 +1,9 @@
+{{- $data := .data -}}
+{{- $sortedData := slice -}}
+{{- range $key, $value := $data -}}
+  {{- if and (not (hasPrefix $key "use_")) (reflect.IsMap $value) -}}
+    {{- $sortedData = $sortedData | append (dict "key" $key "value" $value) -}}
+  {{- end -}}
+{{- end -}}
+{{- $sortedData = sort $sortedData "value.order" "asc" -}}
+{{- return $sortedData -}}

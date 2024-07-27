@@ -1,0 +1,29 @@
+{{ $expData := .Site.Data.exp }}
+{{ $sortedExp :=
+   partial "helpers/sort_data.html"
+   (dict "data" $expData ) }}
+
+<section id="exp">
+    <h2>Experience And Accomplishments</h2>
+    {{ range $sortedExp }}
+        {{ $key := .key }}
+        {{ $value := .value }}
+
+        {{ if index $expData (printf "use_%s" $key) }}
+            <div class="experience-item">
+                <h3>{{ $value.business_name }}</h3>
+		<div>
+		  <p class="job-title">{{ $value.title }}</p>
+		  <p class="job-duration">
+		    {{ $value.start_date }} - {{ $value.end_date }}
+		  </p>
+		</div>
+                <ul>
+		{{ range $value.acc }}
+		  <li>{{ . }}</li>
+		{{ end }}
+                </ul>
+            </div>
+        {{ end }}
+    {{ end }}
+</section>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- This project does not need any metadata, as far as I know -->
+    <!-- Applicant tracking systems may scrape from it, but I don't know ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=V, initial-scale=1.0">
+
+    <!-- setup SCSS -->
+    {{ $style := resources.Get "scss/style.scss" | toCSS }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+    <title>{{ .Site.Data.contact.name }} Resume </title>
+</head>
+
+
+<body>
+    {{ partial "head.html" . }}
+
+    {{ if .Site.Data.summary.use_summary }}
+      {{ partial "summary.html" . }}
+    {{ end }}
+
+    {{ if .Site.Data.skills.use_skills }}
+      {{ partial "skills.html" . }}
+    {{ end }}
+
+    {{ if .Site.Data.projects.use_projects }}
+      {{ partial "projects.html" . }}
+    {{ end }}
+
+    {{ if .Site.Data.contrib.use_contrib }}
+      {{ partial "contrib.html" . }}
+    {{ end }}
+
+    {{ partial "exp.html" . }}
+
+    {{ if .Site.Data.edu.use_edu }}
+        {{ partial "edu.html" . }}
+    {{ end }}
+
+</body>
+</html>

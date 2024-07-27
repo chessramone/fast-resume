@@ -1,0 +1,46 @@
+use_contrib = false
+
+use_contribution_one = true
+use_contribution_two = true
+use_contribution_three = true
+
+[contribution_one]
+    order = 1
+    # type examples:
+    # programming, media, open source, volunteer, whatever you'd like
+    type = ''
+    project_name = ''
+    start_date = ''
+    end_date = ''
+    link = ''
+    tasks = [
+	'my task 1',
+	'my task 2',
+	'my task 3',
+    ]
+
+[contribution_two]
+    order = 2
+    type = ''
+    project_name = ''
+    start_date = ''
+    end_date = ''
+    link = ''
+    tasks = [
+	'my task 1',
+	'my task 2',
+	'my task 3',
+    ]
+
+[contribution_three]
+    order = 3
+    type = ''
+    project_name = ''
+    start_date = ''
+    end_date = ''
+    link = ''
+    tasks = [
+	'my task 1',
+	'my task 2',
+	'my task 3',
+    ]

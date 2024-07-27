@@ -1,0 +1,21 @@
+use_skills = false
+
+lhs_skills = [
+    '',
+    '',
+    '',
+]
+
+rhs_skills = [
+    '',
+    '',
+    '',
+]
+
+all_skills = [
+    '',
+    '',
+    '',
+    '',
+    '',
+]

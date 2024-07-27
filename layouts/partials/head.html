@@ -1,0 +1,27 @@
+{{ $use_linkedin  := .Site.Data.contact.use_linkedin }}
+{{ $use_website   := .Site.Data.contact.use_website }}
+
+{{ $name	  := .Site.Data.contact.name }}
+{{ $email     	  := .Site.Data.contact.email }}
+{{ $phone     	  := .Site.Data.contact.phone }}
+{{ $linkedin_url  := .Site.Data.contact.linkedin_url }}
+{{ $website_url	  := .Site.Data.contact.website.url }}
+{{ $website_name  := .Site.Data.contact.website.name }}
+
+
+<section id='head'>
+<h1>{{ $name }}</h1>
+  <div>
+    <p>{{ $phone }}</p>
+    <p><a href="mailto:{{ $email }}"> {{ $email }} </a></p>
+
+    {{ if $use_linkedin }}
+      <p><a href="{{ $linkedin_url }}"> LinkedIn </a></p>
+    {{ end }}
+
+    {{ if $use_website }}
+      <p><a href="{{ $website_url }}"> {{ $website_name }} </a></p>
+    {{ end }}
+  </div>
+</section>
+<hr>

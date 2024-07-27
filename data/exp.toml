@@ -1,0 +1,60 @@
+use_experience_one = false
+use_experience_two = false
+use_experience_three = false
+use_experience_four = false
+
+[experience_one]
+    order = 1
+    business_name = ''
+    title = ''
+    start_date = ''
+    end_date = ''
+    acc = [
+        'Accomplishment one',
+        'Accomplishment two',
+        'Accomplishment three',
+        'Accomplishment four',
+        'Accomplishment five',
+    ]
+
+[experience_two]
+    order = 1
+    business_name = ''
+    title = ''
+    start_date = ''
+    end_date = ''
+    acc = [
+        'Accomplishment one',
+        'Accomplishment two',
+        'Accomplishment three',
+        'Accomplishment four',
+        'Accomplishment five',
+    ]
+
+[experience_three]
+    order = 1
+    business_name = ''
+    title = ''
+    start_date = ''
+    end_date = ''
+    acc = [
+        'Accomplishment one',
+        'Accomplishment two',
+        'Accomplishment three',
+        'Accomplishment four',
+        'Accomplishment five',
+    ]
+
+[experience_four]
+    order = 1
+    business_name = ''
+    title = ''
+    start_date = ''
+    end_date = ''
+    acc = [
+        'Accomplishment one',
+        'Accomplishment two',
+        'Accomplishment three',
+        'Accomplishment four',
+        'Accomplishment five',
+    ]

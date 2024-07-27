@@ -1,0 +1,36 @@
+{{ $projectData := .Site.Data.projects }}
+{{ $sortedProjects :=
+   partial "helpers/sort_data.html"
+   (dict "data" $projectData) }}
+
+<section id="projects">
+  <h2>Projects</h2>
+  {{ range $sortedProjects }}
+    {{ $key := .key }}
+    {{ $value := .value }}
+
+    {{ if index $projectData (printf "use_%s" $key ) }}
+	<div class="project-item">
+	  <p><strong>{{ $value.name }} ({{ $value.date }})</strong></p>
+	  <p>Project Link: <a href=''> github/prject_name </a></p>
+	  <br>
+
+	  <p> Skills Utalized and Learned: </p>
+	  <ul class="skills">
+	    {{ range $value.skills }}
+	    <li>{{ . }}</li>
+	    {{ end }}
+	  </ul>
+	  <br>
+
+	  <p> Project Details: </p>
+	  <ul class="project-details">
+	    {{ range $value.data }}
+	    <li>{{ . | markdownify }}</li>
+	    {{ end }}
+	  </ul>
+
+	</div>
+      {{ end }}
+    {{ end }}
+</section>

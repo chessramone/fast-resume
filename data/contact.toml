@@ -1,0 +1,12 @@
+use_linkedin = false
+use_website = false
+
+name = ''
+phone = ''
+email = ''
+linkedin_url = ''
+    
+[website]
+    name = ''
+    url = ''
+    email = ''

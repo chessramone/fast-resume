@@ -1,0 +1,27 @@
+use_edu = false
+
+use_asu = false
+use_bsu = false
+use_csu = false
+
+[asu]
+    order = 1
+    name = ''
+    degree = ''
+    start = ''
+    end = ''
+
+[bsu]
+    order = 2
+    name = ''
+    degree = ''
+    start = ''
+    end = ''
+
+
+[csu]
+    order = 3
+    name = ''
+    degree = ''
+    start = ''
+    end = ''

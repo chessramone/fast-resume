@@ -1,0 +1,19 @@
+use_projects = false
+
+use_ufcdb = true
+
+[project_one]
+    order = 1
+    name = ''
+    date = 0000
+    skills = [
+        'Skill one',
+        'Skill two',
+        'Skill three',
+    ]
+    project_info = [
+        '',
+	'',
+	'',
+    ]
+    url = ''
